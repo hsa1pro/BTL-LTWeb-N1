@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IT Music</title>
+	<link rel="shortcut icon" href="../img/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</script>
+	<link rel="stylesheet" type="text/css" href="index.css" id="theme-link"/>
+<!-- 	<link rel="stylesheet" href = "index.js"/> -->
+</head>
+<body>
+	<nav class= "col-12 col-s-12">
+		<div>
+		</div>
+		<div class="home"><a href="#">Trang chủ</a></div>
+		<div class="search col-4 col-s-1">
+			<input class="search-input" type="text" placeholder="Tìm kiếm..." name="keywords" value="">
+			<button><i class="fa fa-search"></i></button>
+		</div>
+		<div class="toggle">
+        	<input type="checkbox" name="" class="switch-toggle" id="dark-light">
+    	</div>
+		<div class="sign-in">
+			<a href="#">Đăng nhập</a>
+		</div>
+	
+	<script>
+		var toggleSwitch = document.querySelector(".toggle");
+		var tSwitch = document.getElementById('dark-light')
+		var theme = document.querySelector("#theme-link");
+		var currenttheme = localStorage.getItem('key');
+		if (currenttheme ==""){
+			theme.href = "index.css";
+			tSwitch.checked = false;
+		}
+		else if (currenttheme == 'light'){
+			theme.href = "index.css";
+			tSwitch.checked = false;
+		}else{
+			theme.href = "index-dark.css";
+			tSwitch.checked = true;
+		}
+		toggleSwitch.addEventListener("click", function() {
+        if (theme.getAttribute("href") == "index.css") {
+                theme.href = "index-dark.css";
+                localStorage.setItem('key', 'dark');
+            }   
+        else {
+            theme.href = "index.css";
+            localStorage.setItem('key','light');
+            }
+        });
+	</script>
+	</nav>
+
+	<aside class="col-2">
+		<ul>
+			<li><a href="#">Bảng Xếp Hạng</a></li>
+			<li><a href="#">Yêu Thích</a></li>
+			<li><a href="#">Nhạc mới</a></li>
+			<li><a href="#">Thể loại</a></li>
+			<li><a href="#">Ca sĩ</a></li>
+		</ul>
+			<div>
+				<p>Đăng nhập để tạo danh sách cho riêng mình</p>
+				<a href="#">Đăng nhập</a>
+			</div>	
+			<div>
+				<p>Tải bài nhạc yêu thích của bạn ngay tại đây</p>
+				<a href="#">Download</a>
+			</div>
+	</aside>
+
+	<header>
+<!-- 		<h1>Các bài hát được yêu thích nhất</h1> -->
+		<!-- List the most favorite music--> 
+	<div class="slideshow-container">
+
+		<div class = "mySlides fade">
+			<a href="#"><img src = "../music_img/Thức giấc.png"></a>
+			<a href="#"><div class="text">Thức giấc - Da lab</div></a>
+		</div>
+
+		<div class = "mySlides fade">
+			<a href="#"><img src = "../music_img/Lạc.png"></a>
+			<a href="#"><div class="text">Lạc - Rythmastic</div></a>
+		</div>
+
+		<div class = "mySlides fade">
+			<a href="#"><img src = "../music_img/Playah.jpg"></a>
+			<a href="#"><div class="text">Playah - Soobin Hoàng Sơn</div></a>
+		</div>
+
+		<div class = "mySlides fade">
+			<a href="#"><img src = "../music_img/Big city boi.jpg"></a>
+			<a href="#"><div class="text">Big city boi - BinZ</div></a>
+		</div>
+
+		<div class = "mySlides fade">
+			<a href="#"><img src = "../music_img/An thần.jpg"></a>
+			<a href="#"><div class="text">An thần - Low G ft Thắng</div></a>
+		</div>
+	</div>	
+	<br>
+
+		
+	<!-- The dots-->
+	<div class="the-dot">
+		<span class="dot" onclick="currentSlides(1)"></span>
+		<span class="dot" onclick="currentSlides(2)"></span>
+		<span class="dot" onclick="currentSlides(3)"></span>
+		<span class="dot" onclick="currentSlides(4)"></span>
+		<span class="dot" onclick="currentSlides(5)"></span>
+	</div>
+	<script>
+	var slideIndex = 0;
+		showSlides();
+
+	function showSlides() {
+  		var i;
+  		var slides = document.getElementsByClassName("mySlides");
+  		var dots = document.getElementsByClassName("dot");
+  		for (i = 0; i < slides.length; i++) {
+    		slides[i].style.display = "none";  
+  		}
+  		slideIndex++;
+  		if (slideIndex > slides.length) {slideIndex = 1}    
+  			for (i = 0; i < dots.length; i++) {
+    		dots[i].className = dots[i].className.replace(" active", "");
+  		}
+  		slides[slideIndex-1].style.display = "block";  
+  		dots[slideIndex-1].className += " active";
+  		setTimeout(showSlides, 5000); 
+	}
+</script>
+	</header>
+	<main>
+		<article>
+			<a href="#"><h3>Nhạc mới</h3></a>
+			<table>
+				<tr>
+					<td>
+						<a href="#"><img src="../music_img/Nụ cười.PNG"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Vẽ.PNG"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Một đêm say.PNG"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/XTC.jpg"></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">Nụ Cười - Rythmastic</a>
+					</td>
+					<td>
+						<a href="#">Vẽ - Trúc Nhân</a>
+					</td>
+					<td>
+						<a href="#">Một đêm say - Thịnh Suy</a>
+					</td>
+					<td>
+						<a href="#">XTC (Xích thêm chút) - RPT</a>
+					</td>
+					
+				</tr>
+			</table>
+		<a href="#"><p>Xem thêm...</p></a>
+		</article>
+		<article>
+			<a href="#"><h3>Bảng xếp hạng tuần</h3></a>
+			<table>
+				<tr>
+					<td>
+						<a href="#"><img src="../music_img/Lemon.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Inferno.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/How you like that.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Gác lại âu lo.jpg"></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">Lemon - Kenshi Yonezu</a>
+					</td>
+					<td>
+						<a href="#">Inferno - Sub Urban & Bella Poarch</a>
+					</td>
+					<td>
+						<a href="#">How you like that - BLACK PINK</a>
+					</td>
+					<td>
+						<a href="#">Gác lại âu lo - Da Lab</a>
+					</td>
+				</tr>
+			</table>
+		<a href="#"><p>Xem thêm...</p></a>
+		</article>
+		<article>
+			<a href="#"><h3>Bài hát được yêu thích </h3></a>
+			<table>
+				<tr>
+					<td>
+						<a href="#"><img src="../music_img/Thức giấc.png"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Lạc.png"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Playah.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../music_img/Big city boi.jpg"></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">Thức giấc - Da Lab</a>
+					</td>
+					<td>
+						<a href="#">Lạc - Rythmastic</a>
+					</td>
+					<td>
+						<a href="#">Playah - Soobin Hoàng Sơn</a>
+					</td>
+					<td>
+						<a href="#">Big city boi - BinZ</a>
+					</td>
+				</tr>
+			</table>
+			<a href="#"><p>Xem thêm...</p></a>
+		</article>
+		<article class = "artist">
+			<a href="#"><h3>Ca sĩ được yêu thích </h3></a>
+			<table>
+				<tr>
+					<td>
+						<a href="#"><img src="../img/Sơn tùng.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../img/Binz.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../img/Đen.jpg"></a>
+					</td>
+					<td>
+						<a href="#"><img src="../img/Vũ.jpg"></a></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#">Sơn Tùng</a>
+					</td>
+					<td>
+						<a href="#">BinZ</a>
+					</td>
+					<td>
+						<a href="#">Đen</a>
+					</td>
+					<td>
+						<a href="#">Vũ</a>
+					</td>
+				</tr>
+			</table>
+			<a href="#"><p>Xem thêm...</p></a>
+		</article>
+	</main>
+	<footer>
+		<h2>Contact us</h2>
+		<div>
+			<a href="#"><i class="fa fa-youtube"></i></a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-trello"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+		<table>
+			<tr>
+				<th>Giới thiệu</th>
+				<th>Thành viên</th>
+				<th>Liên hệ</th>
+			</tr>
+			<tr>
+				<td>Website được tạo ra với mục đích mang tới trải nghiệm âm nhạc tốt nhất tới các bạn</td>
+				<td>
+					<ol>
+						<li>Nguyễn Đông Thịnh</li>
+						<li>Lê Đức Lợi</li>
+						<li>Tô Dương Hưng</li>
+						<li>Hoàng Minh Hiếu</li>
+						<li>Nguyễn Minh Duy</li>
+					</ol>
+				</td>
+				<td>Địa chỉ: Trường đại học Giao Thông Vận Tải số 3 Cầu Giấy, Đống Đa, Hà Nội</td>
+			</tr>
+		</table>
+		<span>&copy; Copyright 2021-itmusic.epizy.com</span>
+	</footer>
+</body>
+</html>
