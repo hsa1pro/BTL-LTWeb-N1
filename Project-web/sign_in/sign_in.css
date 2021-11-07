@@ -1,0 +1,157 @@
+a{
+	text-decoration:  none;
+}
+body{
+	margin:  0;
+	padding:  0;
+	font-family:  Arial, sans-serif;
+	background: url(../img/sign_in.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+nav{
+	margin: 0;
+	background: #ffffff;
+	border-bottom:  1px solid #cccccc;
+	position: relative;
+	height: 65px;
+}
+nav div{
+	position:  relative;
+	margin-top: 0;
+	display:  inline-block;
+	padding: 22px;
+	min-width: 60px;
+	top: 0;
+}
+nav div:hover{
+	background: #cccccc;
+}
+nav div:first-of-type{
+	padding: 0;
+	float: left;
+	margin: 0;
+}
+nav div:first-of-type::before{
+	content:  url(../img/logo.png);
+}
+.home{
+	float: left;
+}
+.sign-up{
+	float: right;
+}
+.sign-in{
+	position: absolute;
+	right:  105px;
+}
+nav div a{
+	text-align: center;
+	font-weight: bold;
+	color:  #000000;
+}
+form{
+	background:  #ffffff;
+	float: right;
+	border:  3px solid #cccccc;
+	width: 40%;
+	margin: 40px 20px 0 0;
+	border-radius:  20px;
+}
+form h1{
+	padding:  15px 0;
+	font-size: 20px;
+	text-align:  center;
+}
+form div{
+	margin:0 0 10px 40px;
+	padding: 5px 10px ;
+	display: inline-block;
+	width: 120px;
+	border: none;
+	border-radius: 10px;
+}
+form div a{
+	font-size:  20px;
+	color: #ffffff;
+}
+form div span{
+	font-weight:  bold;
+	margin-left: 20%;
+	font-size: 15px;
+}
+.gg{background: red;}
+.fb{background: #0066ff;}
+.tw{background: #0099ff;}
+table{
+	margin-top:  10px;
+	margin-left: 20%;
+}
+th{
+	height: 25px;
+	text-align: right;
+	width: 100px;
+}
+td input{
+	height: 30px;
+	width: 80%;
+	border: none;
+	border-radius: 5px;
+	background: #e6ecff;
+}
+.forgot{
+	display:  block;
+	margin-left: 50%;
+	margin-bottom: 0;
+
+}
+.forgot a{
+	font-size:12px;
+	color: black;
+	text-decoration:  underline;
+		color: blue;
+}
+.check
+{
+	margin-top: 15px;
+	margin-left: 25%;
+	height: 15px;
+	width: 15px;
+}
+.log-in{
+	display:  block;
+	padding: 0;
+	margin-left: 40%;
+	margin-top: 15px;
+}
+.log-in button{
+	width: 90px;
+	height: 40px;
+	color:  white;
+	font-weight:  bold;
+	background: linear-gradient(to bottom right, #0099ff 13%, #9999ff 66%);
+	border:  none;
+	border-radius:  5px;
+	cursor: pointer;
+}
+p{	
+	margin: 20px 10% 5px;
+	font-size:  15px;
+	padding-top: 5px;
+	text-align: center;
+}
+p:last-of-type{
+	margin: 20px 10% 5px;
+	font-size:  15px;
+	padding-top: 5px;
+	border-top: 1px solid #cccccc;
+}
+footer{
+	position:  absolute;
+	bottom:  0;
+	width: 100%;
+	background:  #ffffff;
+	text-align: center;
+	padding: 5px 0;
+	border-top: 1px solid #cccccc ;
+}

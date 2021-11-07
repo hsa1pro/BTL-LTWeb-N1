@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign up - IT Music</title>
+	<link rel="shortcut icon" href="../img/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="sign_in.css" id="theme-link"/>
+	<script type="text/javascript">
+		function checkuser (user){
+			if(user== "") {
+				alert("Vui lòng nhập tên!");
+				onfocus = "username";
+					return false;
+				}
+		}
+		function checkmail (mail){
+			if(mail== "") {
+				alert("Vui lòng nhập email!");
+					return false;
+				}
+		}
+		function checkpass (pass){
+			if(pass == "") {
+				alert("Vui lòng nhập mật khẩu!");
+					return false;
+				}
+			if(pass.length < 8) {
+				alert("Mật khẩu phải tối thiểu  8 kí tự");
+					return false;
+			}
+		}
+		function checkcpass (cpass){
+			if(cpass == "") {
+			alert("Vui lòng xác minh mật khẩu!");
+					return false;
+				}
+		}
+		function check(pass, cpass){
+			if(cpass != pass) {
+			alert("Vui lòng xác minh lại mật khẩu!");
+					return false;
+				}
+		}
+		function displayresult () {
+			var user = document.forms[0].username.value;
+			var mail = document.forms[0].email.value;
+			var pass = document.forms[0].password.value;
+			var cpass = document.forms[0].cpassword.value;
+			var cbox = document.querySelector('.check:checked');
+			if (checkuser(user) == false)
+				{
+					document.forms[0].username.focus();
+
+					return;}
+			if (checkmail(mail) == false)
+				{
+					document.forms[0].email.focus();
+					return;}
+			if (checkpass(pass) == false)
+				{
+					document.forms[0].password.focus();
+					return;}
+			if (checkcpass(cpass) == false)
+				{
+					document.forms[0].cpassword.focus();
+					return;}
+			if (check(pass, cpass) == false)
+				{
+					document.forms[0].cpassword.focus();
+					return;}
+			if (cbox == null){
+				alert("Bạn phải đồng ý với điều khoản dịch vụ");
+				return;
+			}		
+		}
+	</script>
+</head>
+<body>
+	<nav class= "col-12 col-s-12">
+		<div>
+		</div>
+		<div class="home"><a href="../index/index.html">Trang chủ</a></div>
+		<div class="sign-up">
+			<a href="#">Đăng kí</a>
+		</div>
+		<div class="sign-in">
+			<a href="sign_in.html">Đăng nhập</a>
+		</div>
+
+	</nav>
+<main>	
+	<form action="">
+		<h1>Đăng kí tài khoản của bạn</h1>
+		<div class="gg"><a href="#"><i class="fa fa-google"></i><span>Google</span></a></div>
+		<div class="fb"><a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a></div>
+		<div class="tw"><a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a></div>
+		<p>Hoặc</p>
+		<table>
+			<tr>
+				<th>Username</th>
+				<td><input type = "text" name = "username"></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><input type = "text" name = "email"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type = "password" name = "password"></td>
+			</tr>
+			<tr>
+				<th>Confirm Password</th>
+				<td><input type = "password" name = "cpassword"></td>
+			</tr>
+		</table>
+		<input type="checkbox" class="check">
+		<span class="remeber">Tôi đồng ý <a href="#">Điều khoản dịch vụ</a></span>
+		<div class="log-in">
+			<button type = "button" onclick = "displayresult();">Đăng kí</button>
+		</div>
+		<p>Bạn đã có tài khoản? <a href="sign_in.html">Đăng nhập</a></p>
+		<p>Trang này được bảo vệ bởi reCAPTCHA và áp dụng <a href="#">Điều khoản dịch vụ</a></p>
+	</form>
+</main>
+<footer>
+	&copy; Copyright 2021 - itmusic.epizy.com
+</footer>
+
+<script>
+		var theme = document.querySelector("#theme-link");
+		var currenttheme = localStorage.getItem('key');
+		if (currenttheme ==""){
+			theme.href = "sign_in.css";
+			link.src = "../img/sign_in.png";
+		}
+		else if (currenttheme == 'light'){
+			theme.href = "sign_in.css";
+			link.src = "../img/sign_in.png";
+		}else{
+			theme.href = "sign_in_dark.css";
+			link.src = "../img/sign_in_dark.png";
+		}
+</script>
+</body>
+</html>
