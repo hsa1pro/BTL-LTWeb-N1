@@ -5,9 +5,12 @@
 	<title>IT Music</title>
 	<link rel="shortcut icon" href="../img/icon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</script>
 	<link rel="stylesheet" type="text/css" href="index.css" id="theme-link"/>
-<!-- 	<link rel="stylesheet" href = "index.js"/> -->
+	<script>
+		function login(){
+			alert("Bạn cần đăng nhập để sử dụng chức năng này");
+		}
+	</script>
 </head>
 <body>
 	<nav class= "col-12 col-s-12">
@@ -22,7 +25,7 @@
         	<input type="checkbox" name="" class="switch-toggle" id="dark-light">
     	</div>
 		<div class="sign-in">
-			<a href="#">Đăng nhập</a>
+			<a href="../sign_in/sign_in.html">Đăng nhập</a>
 		</div>
 	
 	<script>
@@ -41,6 +44,7 @@
 			theme.href = "index-dark.css";
 			tSwitch.checked = true;
 		}
+		
 		toggleSwitch.addEventListener("click", function() {
         if (theme.getAttribute("href") == "index.css") {
                 theme.href = "index-dark.css";
@@ -54,27 +58,25 @@
 	</script>
 	</nav>
 
-	<aside class="col-2">
+	<aside class="col-2 col-s-4">
 		<ul>
 			<li><a href="#">Bảng Xếp Hạng</a></li>
-			<li><a href="#">Yêu Thích</a></li>
+			<li><a href="#" onclick="login()">Yêu Thích</a></li>
 			<li><a href="#">Nhạc mới</a></li>
 			<li><a href="#">Thể loại</a></li>
 			<li><a href="#">Ca sĩ</a></li>
 		</ul>
 			<div>
 				<p>Đăng nhập để tạo danh sách cho riêng mình</p>
-				<a href="#">Đăng nhập</a>
+				<a href="../sign_in/sign_in.html">Đăng nhập</a>
 			</div>	
 			<div>
 				<p>Tải bài nhạc yêu thích của bạn ngay tại đây</p>
-				<a href="#">Download</a>
+				<a href="#" onclick="login()">Download</a>
 			</div>
 	</aside>
 
 	<header>
-<!-- 		<h1>Các bài hát được yêu thích nhất</h1> -->
-		<!-- List the most favorite music--> 
 	<div class="slideshow-container">
 
 		<div class = "mySlides fade">
@@ -103,21 +105,18 @@
 		</div>
 	</div>	
 	<br>
-
-		
 	<!-- The dots-->
 	<div class="the-dot">
-		<span class="dot" onclick="currentSlides(1)"></span>
-		<span class="dot" onclick="currentSlides(2)"></span>
-		<span class="dot" onclick="currentSlides(3)"></span>
-		<span class="dot" onclick="currentSlides(4)"></span>
-		<span class="dot" onclick="currentSlides(5)"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
 	</div>
 	<script>
-	var slideIndex = 0;
+		var slideIndex = 0;
 		showSlides();
-
-	function showSlides() {
+		function showSlides() {
   		var i;
   		var slides = document.getElementsByClassName("mySlides");
   		var dots = document.getElementsByClassName("dot");
@@ -132,8 +131,8 @@
   		slides[slideIndex-1].style.display = "block";  
   		dots[slideIndex-1].className += " active";
   		setTimeout(showSlides, 5000); 
-	}
-</script>
+		}
+	</script>
 	</header>
 	<main>
 		<article>
