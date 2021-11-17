@@ -14,7 +14,7 @@ nav{
 	background:  #191919;
 	position: fixed;
 	top:  0;
-	width: 1550px;
+	width: 100%;
 	height: 65px;
 	z-index: 3;
 }
@@ -38,9 +38,9 @@ nav div:first-child::before{
 }
 .home a{
 	position: relative;
-	bottom:  23px;
+	bottom:  25px;
 	left:  10px;
-	font-size:  18px;
+	font-size:  20px;
 	color: #f2f2f2;
 	font-weight: bold;
 }
@@ -55,19 +55,18 @@ nav div button{
 	position: absolute;
 	height: 25px;
 	width:  25px;
-	top: 10px;
-	right: 3px;
-	border-radius: 26px;
+	top: 20px;
+	right: 4px;
+	border-radius: 50%;
 	border:  none;
 	cursor: pointer;
 }
 nav div input{
 	position: absolute;
-	top: 8px;
+	top: 18px;
 	left:  0;
-	width: 100%;
-	height:  30px;
-	background:  #f2f2f2;
+	width: 98%;
+	height:  24px;
 	font-size:  15px;
 	border-radius:26px;
 }
@@ -117,9 +116,9 @@ nav div input{
 }
 .sign-in a{
 	position: relative;
-	bottom:  23px;
+	bottom:  25px;
 	left:  10px;
-	font-size:  18px;
+	font-size:  20px;
 	color: #f2f2f2;
 	font-weight: bold;
 }
@@ -128,7 +127,7 @@ nav div input{
 }
 
 aside{
-	margin-top: 65px;
+	margin-top: 0px;
 	float:  left;
 	position:  fixed;
 	background:  #262626;
@@ -143,8 +142,8 @@ aside ul{
 aside li{
 	padding: 20px;
 	border-bottom: 1px solid #737373;
-	font-weight:  bold;
 	color:  #009933;
+	font-weight:  bold;
 }
 aside li:hover{
 	background: #404040;
@@ -157,7 +156,7 @@ aside div{
 	text-align:  center;
 	color:  #f2f2f2;
 	font-weight:  bold;
-	width: 70%;
+	width: 60%;
 	margin-left:  25px;
 	margin-top:  30px;
 	padding: 5px 10px 15px;
@@ -182,123 +181,57 @@ aside div:last-of-type{
 	border-top:  10px solid #808080;
 	border-right: 8px solid #808080;
 }
-header{
-	margin-left: 20%;
-}
-header img{
-	width: 100%;
-	height: 400px;
-}
-* {box-sizing:border-box}
-
-.slideshow-container{
-	width: 100%;
-	position: relative;
-	top: 65px;
+main{
+	
+	height: 1000px;
+	margin-top: 65px;
+	margin-left: 250px;
 }
 
-/*hide the images by default*/
-.mySlide{
-	display: none;
-}
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  font-weight: bold;
-  font-size:  24px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.the-dot{
-	margin-top: 70px;
-	float: right;
-	padding-right:  10px;
-}
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.8s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-article{
-	margin-left: 20%;
-}
-article:first-of-type{
-	margin-top: 90px;
-}
-article h3{
-	padding-top: 10px;
-	font-weight:  bold;
-	color: #009933;
-	border-top:  3px solid #737373;
-}
-article a{
-	color:  #ff9900;
-}
-article img{
-	width: 150px;
-	height:  150px;
-	border-radius:  20px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
-}
-article img:hover{
-	opacity: 0.5;
-}
-article td{
-	text-align: center;
+main div {
+	box-sizing: border-box;
+	
 	width: 300px;
+	height: 400px;
+	background-image: url(../img/nen.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #e6e6e6;
+	float: left;
+	
+	margin:  40px;
+	margin-left: 200px;
+	border-radius: 30px;
+	border: 1px solid #cccccc;
 }
-article td a{
-	color:  #009933;
-	font-weight:  bold;
-}
-article p{
-	text-align:  right;
-	margin-top: 20px;
-	padding-right: 10px;
-}
-.artist img{
-	border:  none;
-	border-radius:  100px;
-}
+div.a img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 50px 0 0 50px ;
 
+}
+div.a img:hover{
+	opacity: .5;
+}
+div.a p{
+	border-radius: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	color:#009933 ;
+	text-shadow: 1px 1px #262626;
+	text-align: center;
+	margin-top: 50px;
+	width: 60%;
+	margin-left: 20%;
+}
 footer{
+	margin-bottom:  0;
 	margin-left: 16.66%;
 	background: #191919;
 	text-align: center;
 	color:  #cccccc;
+	clear: left;
 }
 footer h2{
 	padding-top:  30px;
@@ -306,11 +239,10 @@ footer h2{
 footer a{
 	margin: 5px 10px;
 	font-size:  50px;
-	color: #ff9900;
+	color:  #ff9900;
 }
 footer th,td{
 	width:  400px;
-
 }
 footer td{
 	text-align:  left;

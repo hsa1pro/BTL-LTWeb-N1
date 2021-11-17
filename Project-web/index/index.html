@@ -12,11 +12,13 @@
 		}
 	</script>
 </head>
+
 <body>
+
 	<nav class= "col-12 col-s-12">
 		<div>
 		</div>
-		<div class="home"><a href="#">Trang chủ</a></div>
+		<div class="home"><a href="index.html">Trang chủ</a></div>
 		<div class="search col-4 col-s-1">
 			<input class="search-input" type="text" placeholder="Tìm kiếm..." name="keywords" value="">
 			<button><i class="fa fa-search"></i></button>
@@ -31,7 +33,7 @@
 	<script>
 		var toggleSwitch = document.querySelector(".toggle");
 		var tSwitch = document.getElementById('dark-light')
-		var theme = document.querySelector("#theme-link");
+		var theme = document.getElementById("theme-link");
 		var currenttheme = localStorage.getItem('key');
 		if (currenttheme ==""){
 			theme.href = "index.css";
@@ -60,11 +62,11 @@
 
 	<aside class="col-2 col-s-4">
 		<ul>
-			<li><a href="#">Bảng Xếp Hạng</a></li>
-			<li><a href="#" onclick="login()">Yêu Thích</a></li>
-			<li><a href="#">Nhạc mới</a></li>
-			<li><a href="#">Thể loại</a></li>
-			<li><a href="#">Ca sĩ</a></li>
+			<a href="week-chart.html"><li>Bảng Xếp Hạng</li></a>
+			<a href="../codelist/listnew.html"><li>Khám phá mới</li></a>
+			<a href="#" onclick="login()"><li>Yêu Thích</li></a>
+			<a href="#"><li>Thể loại</li></a>
+			<a href="singer.html"><li>Ca sĩ</li></a>
 		</ul>
 			<div>
 				<p>Đăng nhập để tạo danh sách cho riêng mình</p>
@@ -76,7 +78,7 @@
 			</div>
 	</aside>
 
-	<header>
+ 	<header>
 	<div class="slideshow-container">
 
 		<div class = "mySlides fade">
@@ -104,8 +106,6 @@
 			<a href="#"><div class="text">An thần - Low G ft Thắng</div></a>
 		</div>
 	</div>	
-	<br>
-	<!-- The dots-->
 	<div class="the-dot">
 		<span class="dot"></span>
 		<span class="dot"></span>
@@ -133,20 +133,21 @@
   		setTimeout(showSlides, 5000); 
 		}
 	</script>
+
 	</header>
-	<main>
-		<article>
-			<a href="#"><h3>Nhạc mới</h3></a>
-			<table>
+		<main>
+			<article>
+				<a href="../codelist/listnew.html"><h3>Khám phá mới</h3></a>
+				<table>
 				<tr>
 					<td>
-						<a href="#"><img src="../music_img/Nụ cười.PNG"></a>
+						<a href="../codenhacmoi/nhac1.html"><img src="../music_img/Nụ cười.PNG"></a>
 					</td>
 					<td>
-						<a href="#"><img src="../music_img/Vẽ.PNG"></a>
+						<a href="../codenhacmoi/nhac3.html"><img src="../music_img/Vẽ.PNG"></a>
 					</td>
 					<td>
-						<a href="#"><img src="../music_img/Một đêm say.PNG"></a>
+						<a href="../codenhacmoi/nhac4.html"><img src="../music_img/Một đêm say.PNG"></a>
 					</td>
 					<td>
 						<a href="#"><img src="../music_img/XTC.jpg"></a>
@@ -154,13 +155,13 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="#">Nụ Cười - Rythmastic</a>
+						<a href="../codenhacmoi/nhac1.html">Nụ Cười - Rythmastic</a>
 					</td>
 					<td>
-						<a href="#">Vẽ - Trúc Nhân</a>
+						<a href="../codenhacmoi/nhac3.html">Vẽ - Trúc Nhân</a>
 					</td>
 					<td>
-						<a href="#">Một đêm say - Thịnh Suy</a>
+						<a href="../codenhacmoi/nhac4.html">Một đêm say - Thịnh Suy</a>
 					</td>
 					<td>
 						<a href="#">XTC (Xích thêm chút) - RPT</a>
@@ -168,7 +169,7 @@
 					
 				</tr>
 			</table>
-		<a href="#"><p>Xem thêm...</p></a>
+		<a href="../codelist/listnew.html"><p>Xem thêm...</p></a>
 		</article>
 		<article>
 			<a href="#"><h3>Bảng xếp hạng tuần</h3></a>
@@ -239,17 +240,17 @@
 			<a href="#"><p>Xem thêm...</p></a>
 		</article>
 		<article class = "artist">
-			<a href="#"><h3>Ca sĩ được yêu thích </h3></a>
+			<a href="singer.html"><h3>Ca sĩ được yêu thích </h3></a>
 			<table>
 				<tr>
 					<td>
-						<a href="#"><img src="../img/Sơn tùng.jpg"></a>
+						<a href="../singer_song/sontung.html"><img src="../img/Sơn tùng.jpg"></a>
 					</td>
 					<td>
-						<a href="#"><img src="../img/Binz.jpg"></a>
+						<a href="../singer_song/binz.html"><img src="../img/Binz.jpg"></a>
 					</td>
 					<td>
-						<a href="#"><img src="../img/Đen.jpg"></a>
+						<a href="../singer_song/den.html"><img src="../img/Đen.jpg"></a>
 					</td>
 					<td>
 						<a href="#"><img src="../img/Vũ.jpg"></a></a>
@@ -257,20 +258,20 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="#">Sơn Tùng</a>
+						<a href="../singer_song/sontung.html">Sơn Tùng</a>
 					</td>
 					<td>
-						<a href="#">BinZ</a>
+						<a href="../singer_song/binz.html">BinZ</a>
 					</td>
 					<td>
-						<a href="#">Đen</a>
+						<a href="../singer_song/den.html">Đen</a>
 					</td>
 					<td>
 						<a href="#">Vũ</a>
 					</td>
 				</tr>
 			</table>
-			<a href="#"><p>Xem thêm...</p></a>
+			<a href="singer.html"><p>Xem thêm...</p></a>
 		</article>
 	</main>
 	<footer>

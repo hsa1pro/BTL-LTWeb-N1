@@ -55,7 +55,7 @@ nav div button{
 	position: absolute;
 	height: 25px;
 	width:  25px;
-	top: 10px;
+	top: 17px;
 	right: 3px;
 	border-radius: 26px;
 	border:  none;
@@ -63,10 +63,10 @@ nav div button{
 }
 nav div input{
 	position: absolute;
-	top: 8px;
+	top: 15px;
 	left:  0;
-	width: 100%;
-	height:  30px;
+	width: 99%;
+	height: 25px;
 	background:  #f2f2f2;
 	font-size:  15px;
 	border-radius:26px;
@@ -157,7 +157,7 @@ aside div{
 	text-align:  center;
 	color:  #f2f2f2;
 	font-weight:  bold;
-	width: 70%;
+	width: 60%;
 	margin-left:  25px;
 	margin-top:  30px;
 	padding: 5px 10px 15px;
@@ -182,81 +182,12 @@ aside div:last-of-type{
 	border-top:  10px solid #808080;
 	border-right: 8px solid #808080;
 }
-header{
-	margin-left: 20%;
-}
-header img{
-	width: 100%;
-	height: 400px;
-}
-* {box-sizing:border-box}
 
-.slideshow-container{
-	width: 100%;
-	position: relative;
-	top: 65px;
-}
-
-/*hide the images by default*/
-.mySlide{
-	display: none;
-}
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  font-weight: bold;
-  font-size:  24px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.the-dot{
-	margin-top: 70px;
-	float: right;
-	padding-right:  10px;
-}
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.8s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 article{
 	margin-left: 20%;
 }
 article:first-of-type{
-	margin-top: 90px;
+	margin-top: 80px;
 }
 article h3{
 	padding-top: 10px;
@@ -272,9 +203,6 @@ article img{
 	height:  150px;
 	border-radius:  20px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
-}
-article img:hover{
-	opacity: 0.5;
 }
 article td{
 	text-align: center;
@@ -349,4 +277,30 @@ footer span{
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+}
+
+/* Darkmode for player */
+.heading {
+	color: #009933;
+}
+
+.song-info,
+.current-time,
+.time-total,
+.lyrics-content,
+.lyrics-heading,
+.music-list .title,
+.song-infomation .name,
+.song-infomation .author {
+	color: #fff;
+}
+
+.hero .music-list {
+	background-color:#262626;
+}
+
+.music-list .item.active .song-infomation .name,
+.music-list .item.active .song-infomation .author{
+	color: #262626;
+	font-weight: 600;
 }
