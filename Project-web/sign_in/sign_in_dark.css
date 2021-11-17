@@ -100,7 +100,7 @@ th{
 }
 td input{
 	height: 25px;
-	width: 80%;
+	width: 90%;
 	border: none;
 	border-radius: 5px;
 	background: #cccccc;
@@ -140,6 +140,9 @@ td input{
 	background: linear-gradient(to bottom right, #0099ff 13%, #9999ff 66%);
 	border:  none;
 	border-radius:  5px;
+}
+.log-in button:hover{
+	background: linear-gradient(to top left, #0099ff 10%, #9999ff 47%);
 	cursor: pointer;
 }
 p{
