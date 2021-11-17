@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>IT Music</title>
+	<link rel="shortcut icon" href="../img/icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="singer_song.css" id="theme-link" />
+	<script>
+		function login() {
+			alert("Bạn cần đăng nhập để sử dụng chức năng này");
+		}
+	</script>
+</head>
+
+<body>
+	<nav class= "col-12 col-s-12">
+		<div>
+		</div>
+		<div class="home"><a href="../index/index.html">Trang chủ</a></div>
+		<div class="search col-4 col-s-1">
+			<input class="search-input" type="text" placeholder="Tìm kiếm..." name="keywords" value="">
+			<button><i class="fa fa-search"></i></button>
+		</div>
+		<div class="toggle">
+        	<input type="checkbox" name="" class="switch-toggle" id="dark-light">
+    	</div>
+		<div class="sign-in">
+			<a href="../sign_in/sign_in.html">Đăng nhập</a>
+		</div>
+
+		<script>
+			var toggleSwitch = document.querySelector(".toggle");
+			var tSwitch = document.getElementById('dark-light')
+			var theme = document.querySelector("#theme-link");
+			var currenttheme = localStorage.getItem('key');
+			if (currenttheme == "") {
+				theme.href = "singer_song.css";
+				tSwitch.checked = false;
+			}
+			else if (currenttheme == 'light') {
+				theme.href = "singer_song.css";
+				tSwitch.checked = false;
+			} else {
+				theme.href = "singer_song-dark.css";
+				tSwitch.checked = true;
+			}
+
+			toggleSwitch.addEventListener("click", function () {
+				if (theme.getAttribute("href") == "singer_song.css") {
+					theme.href = "singer_song-dark.css";
+					localStorage.setItem('key', 'dark');
+				}
+				else {
+					theme.href = "singer_song.css";
+					localStorage.setItem('key', 'light');
+				}
+			});
+		</script>
+	</nav>
+
+	<aside class="col-2 col-s-4">
+		<ul>
+			<a href="../index/week-chart.html"><li>Bảng Xếp Hạng</li></a>
+			<a href="../codelist/listnew.html"><li>Khám phá mới</li></a>
+			<a href="#" onclick="login()"><li>Yêu Thích</li></a>
+			<a href="#"><li>Thể loại</li></a>
+			<a href="../index/singer.html"><li>Ca sĩ</li></a>
+		</ul>
+			<div>
+				<p>Đăng nhập để tạo danh sách cho riêng mình</p>
+				<a href="../sign_in/sign_in.html">Đăng nhập</a>
+			</div>	
+			<div>
+				<p>Tải bài nhạc yêu thích của bạn ngay tại đây</p>
+				<a href="#" onclick="login()">Download</a>
+			</div>
+	</aside>
+	<main>
+
+	<div class="a">
+		<img src="../img/Jack.jpg" alt="">
+		<h2 >Jack</h2>
+		<p>12/4/1997(24 tuổi)</p>
+		<p>Quê quán</p>
+		<p>Bến Tre, Việt Nam</p>
+		
+	</div>
+	<div class="b">
+		<ul>
+			<a href=""><li ><img src="../music_img/hn.jpg"><span>1. Hồng Nhan</span></li></a>
+			<a href=""><li><img src="../music_img/bp.jpg"><span>2. Bạc Phận</span></li></a>
+			<a href=""><li><img src="../music_img/dd.jpg"><span>3. Đom Đóm</span></li></a>
+			<a href=""><li><img src="../music_img/sg.jpg"><span>4. Sóng Gió </span></li></a>
+			<a href=""><li><img src="../music_img/l1tct.jpg"><span>5. Là Một Thằng Con Trai</span></li></a>
+			<a href=""><p>Xem Thêm >></p></a>
+		</ul>
+	</div>
+	
+
+	</main>
+		
+
+	<footer>
+		<h2>Contact us</h2>
+		<div>
+			<a href="#"><i class="fa fa-youtube"></i></a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-trello"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+		</div>
+		<table>
+			<tr>
+				<th>Giới thiệu</th>
+				<th>Thành viên</th>
+				<th>Liên hệ</th>
+			</tr>
+			<tr>
+				<td>Website được tạo ra với mục đích mang tới trải nghiệm âm nhạc tốt nhất tới các bạn</td>
+				<td>
+					<ol>
+						<li>Nguyễn Đông Thịnh</li>
+						<li>Lê Đức Lợi</li>
+						<li>Tô Dương Hưng</li>
+						<li>Hoàng Minh Hiếu</li>
+						<li>Nguyễn Minh Duy</li>
+					</ol>
+				</td>
+				<td>Địa chỉ: Trường đại học Giao Thông Vận Tải số 3 Cầu Giấy, Đống Đa, Hà Nội</td>
+			</tr>
+		</table>
+		<span>&copy; Copyright 2021-itmusic.epizy.com</span>
+	</footer>
+</body>
+
+</html>
